@@ -89,8 +89,7 @@ module.exports = function(grunt) {
                      'compass:compile',
                      'sass:compile',
                      'less:compile',
-                     'stylus:compile',
-                     'cssmin'
+                     'stylus:compile'
                      ]));
 
   grunt.registerTask('build:other', filterAvailable([
@@ -101,9 +100,11 @@ module.exports = function(grunt) {
                      'copy:stage',
                      'unlock',
                      'dom_munger:distEmber',
+                     'dom_munger:distEmberData',
                      'dom_munger:distHandlebars',
                      'useminPrepare',
                      'concat',
+                     'cssmin',
                      'uglify',
                      'copy:dist',
                      'rev',
@@ -112,7 +113,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build:after:debug', filterAvailable([
                      'copy:stage',
-                     'unlock' 
+                     'unlock'
                      ]));
 
   grunt.registerTask('build:dist', "Build a minified & production-ready version of your app.", [

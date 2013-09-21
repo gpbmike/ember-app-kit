@@ -35,14 +35,22 @@ module.exports = {
     }]
   },
   "vendor": {
-    src: ['vendor/**/*.js', 'vendor/**/*.css'],
-    dest: 'tmp/public/'
+    files: [{
+      src: ['vendor/**/*.{js,css,eot,svg,ttf,woff}'],
+      dest: 'tmp/public/'
+    },
+    {
+      expand: true,
+      flatten: true,
+      src: ['vendor/bootstrap/dist/fonts/*'],
+      dest: 'tmp/public/fonts/'
+    }]
   },
   "dist": {
     files: [{
       expand: true,
       cwd: 'tmp/public',
-      src: ['**', '!coverage'],
+      src: ['**/*.html', 'fonts/**'],
       dest: 'dist/'
     }]
   },

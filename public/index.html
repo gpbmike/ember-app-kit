@@ -2,17 +2,20 @@
 <html>
 <head>
   <title>App</title>
+  <!-- build:css(.) assets/vendor.min.css -->
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(tmp/public) assets/app.min.css -->
   <link rel="stylesheet" href="/assets/app.css">
-
-  <!-- for more details visit: https://github.com/yeoman/grunt-usemin -->
-
+  <!-- endbuild -->
   <!-- build:js(.) assets/vendor.min.js -->
   <script src="/vendor/jquery/jquery.js"></script>
+  <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/vendor/handlebars/handlebars.js"></script>
   <script src="/vendor/ember/index.js"></script>
+  <script src="/vendor/ember-data/index.js"></script>
   <script src="/vendor/loader.js"></script>
   <!-- endbuild -->
-
   <!-- build:js(tmp/public) assets/app.min.js -->
   <script src="/assets/app.js"></script>
   <script src="/assets/templates.js"></script>
