@@ -36,7 +36,7 @@ module.exports = {
   },
   "vendor": {
     files: [{
-      src: ['vendor/**/*.{js,css,eot,svg,ttf,woff}'],
+      src: ['vendor/**/*.{js,css}'],
       dest: 'tmp/public/'
     },
     {
@@ -50,7 +50,7 @@ module.exports = {
     files: [{
       expand: true,
       cwd: 'tmp/public',
-      src: ['**/*.html', 'fonts/**'],
+      src: ['index.html', 'fonts/**', 'assets/**/*.svg'],
       dest: 'dist/'
     }]
   },
